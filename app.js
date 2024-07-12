@@ -54,7 +54,7 @@ app.put('/users/', auth, async (req, res) => {
 });
 
 
-app.get('/users/:email/weather', auth, async (req, res) => {
+app.get('/weather/:email/', auth, async (req, res) => {
   const { email } = req.params;
   try {
     const user = await User.findOne({ email });
